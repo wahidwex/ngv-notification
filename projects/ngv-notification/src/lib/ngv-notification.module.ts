@@ -1,28 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NgvNotificationComponent } from './components/ngv-notification/ngv-notification.component';
-import { Subject } from 'rxjs';
-import { NGV_NOTIFICATION_CLOSE_TOKEN } from './classes';
-import { NGV_NOTIFICATION_TOKEN } from './classes';
-import { NgvNotificationModel } from './models';
+import { NgvNotificationComponent } from './ngv-notification.component';
+
+
 
 @NgModule({
-  declarations: [NgvNotificationComponent],
-  imports: [
-    CommonModule
+  declarations: [
+    NgvNotificationComponent
   ],
-  providers: [
-    {
-      provide: NGV_NOTIFICATION_CLOSE_TOKEN, useFactory: (() => {
-        return new Subject<void>();
-      })
-    },
-    {
-      provide: NGV_NOTIFICATION_TOKEN, useFactory: (() => {
-        return new Subject<NgvNotificationModel>();
-      })
-    }
+  imports: [
+  ],
+  exports: [
+    NgvNotificationComponent
   ]
 })
-export class NgvNotificationModule {
-}
+export class NgvNotificationModule { }

@@ -27,15 +27,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngv-notification/src/test.ts",
             "tsConfig": "projects/ngv-notification/tsconfig.spec.json",
-            "karmaConfig": "projects/ngv-notification/karma.conf.js"
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "bcf9ed7b-0bb8-4de0-a215-860e0c689e21"
+    "analytics": "f82af30c-c60b-47b9-aa85-5216658fcc8d"
   }
 }
